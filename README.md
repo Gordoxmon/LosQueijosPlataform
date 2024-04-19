@@ -1,53 +1,43 @@
-# CakePHP Application Skeleton
+# Plataforma
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+## Descrição
+Este projeto foi desenvolvido para a disciplina de Programação Web, do curso de Engenharia de Computação da Universidade Federal do Ceará. O objetivo é criar uma plataforma de ensino a distância, onde professores podem criar cursos e alunos podem se inscrever neles.
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
+placeholder maltinha, copilot escreveu isto
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+## Tecnologias
+- [cakephp4](https://cakephp.org/)
+- [mysql](https://www.mysql.com/)
+- [docker](https://www.docker.com/)
+- [docker-compose](https://docs.docker.com/compose/)
+- [phpmyadmin](https://www.phpmyadmin.net/)
+- [bootstrap](https://getbootstrap.com/)
+- [jquery](https://jquery.com/)
 
-## Installation
-
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-
+## Instalação
+1. Clone o repositório
 ```bash
-composer create-project --prefer-dist cakephp/app
+git clone url...
+```
+2. Entre na pasta do projeto
+```bash
+cd o nome da pasta
+```
+3. Inicie o docker-compose
+```bash
+docker compose -f docker-compose.dev.yml up -d
 ```
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+## Acesso
+- Acesse a aplicação em [http://localhost](http://localhost)
+- Acesse o phpmyadmin em [http://localhost:8080](http://localhost:8080)
+- Usuário: root
+- Senha: 123
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+## Coisas
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
-
-```bash
-bin/cake server -p 8765
-```
-
-Then visit `http://localhost:8765` to see the welcome page.
-
-## Update
-
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
-
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and set up the
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+- Antes de implementar base de dados ver migrations
+- Antes de implementar controllers ver o que é necessário
+- Antes de implementar views ver o que é necessário
+- Antes de implementar models ver o que é necessário
+- Proxima sexta ir a aula!
