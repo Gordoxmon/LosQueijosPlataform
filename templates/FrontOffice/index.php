@@ -1,33 +1,25 @@
-<?php
-?>
-<style>
-    .h1{
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-    }
-</style>
-<div class="container">
-    <div class="row">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-            <span class="h1 text-capitalize">
-                <?= 'hviuodefrhoivuredh' ?>
-            </span>
+<div class="imgbox">
+        <img class="center-fit" src='FUNDO.png'>
+    </div>
+
+    <div>
+        <img class="img-rato" src='mouse seguro 1.png'>
+    </div>
+
+    <div>
+        <img class="img-titulo" src='titulo.png'>
+    </div>
+
+    <div ontouchstart="">
+        <div class="button">
+            <a href="lore1.html">Começar</a>
+        </div>
+   
+        <div class="button2">
+            <a>Ranking</a>
+        </div>
+
+        <div class="button3">
+            <a href="creditos.html">Créditos</a>
         </div>
     </div>
-</div>
-
-<script>
-    const rontate = async (i)=> {
-
-            await new Promise(resolve => setTimeout(resolve, 1));
-            $('.h1').css('transform', 'rotate('+10*i+'deg)');
-
-    }
-    $(document).ready(async () => {
-        i=1;
-        while (i>0) {
-            i=i*i;
-            await rontate(i);
-        }   });
-</script>
