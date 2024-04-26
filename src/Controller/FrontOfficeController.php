@@ -11,8 +11,7 @@ class FrontOfficeController extends AppController
     {
 
     }
-    public function page()
-    {
+    public function credits(){
 
     }
 }
