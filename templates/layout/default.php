@@ -30,15 +30,10 @@
     <?= $this->Html->css('styles.css') ?>
     <?= $this->html->script('scripts.js') ?>
 </head>
-<body>
-    <nav>
+<body style='background-color: #659664;'>
 
-    </nav>
-    <main class="min-vh-100 d-flex justify-content-center align-items-center">
         <?= $this->fetch('content') ?>
-    </main>
-    <footer>
 
-    </footer>
+
 </body>
 </html>
