@@ -13,7 +13,10 @@ RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl gd intl bcmath
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set working directory
+
 WORKDIR /var/www
+
+CMD  ["composer", "install"]
 
 CMD ["php-fpm"]
 
