@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9a96782454ddae999c76e8560b46917",
+    "content-hash": "4b92e0ce57a71e6c87f6ea0df9d0f5ee",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -5889,7 +5889,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "cakephp/migrations": 0
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
