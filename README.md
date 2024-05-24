@@ -41,3 +41,14 @@ docker compose -f docker-compose.dev.yml up -d
 - Antes de implementar views ver o que é necessário
 - Antes de implementar models ver o que é necessário
 - Proxima sexta ir a aula!
+
+
+## migrations
+### First import the migrations, isto importa a base de dados
+```bash
+docker exec platform bin/cake migrations migrate  
+```
+### depois popular a base de dados!
+```bash
+docker exec platform bin/cake migrations seed
+```
