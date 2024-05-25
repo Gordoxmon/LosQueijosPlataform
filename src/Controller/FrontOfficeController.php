@@ -24,7 +24,8 @@ class FrontOfficeController extends AppController
         $this->set(compact('topics'));
     }
 
-    public function credits()
+    public function credit()
     {
+
     }
 }

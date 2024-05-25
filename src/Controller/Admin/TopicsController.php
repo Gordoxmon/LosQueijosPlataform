@@ -33,7 +33,7 @@ class TopicsController extends AppController
     public function view($id = null)
     {
         $topic = $this->Topics->get($id, [
-            'contain' => ['Questions'],
+            'contain' => ['Questions'=>['Options']],
         ]);
 
         $this->set(compact('topic'));
