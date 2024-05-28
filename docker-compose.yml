@@ -26,6 +26,8 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/www.kalus.space.pem:/etc/nginx/conf.d/www.kalus.space.pem
+      - ./nginx/www.kalus.space-key.pem:/etc/nginx/conf.d/www.kalus.space-key.pem
     networks:
       - app-network
 
