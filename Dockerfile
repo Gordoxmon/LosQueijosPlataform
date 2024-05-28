@@ -18,6 +18,8 @@ WORKDIR /var/www
 
 COPY . .
 
+RUN rm  -R vendor/
+
 RUN composer install
 
 CMD ["php-fpm"]
