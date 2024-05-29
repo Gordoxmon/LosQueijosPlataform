@@ -18,7 +18,6 @@ WORKDIR /var/www
 
 COPY . .
 
-RUN rm  -R vendor/
 
 RUN composer update
 RUN composer install
