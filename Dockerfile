@@ -20,6 +20,7 @@ COPY . .
 
 RUN rm  -R vendor/
 
+RUN composer update
 RUN composer install
 
 CMD ["php-fpm"]
