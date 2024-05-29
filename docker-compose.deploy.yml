@@ -16,7 +16,7 @@ services:
       - app-network
 
   webserver:
-    image: nginx:latest
+    image: jwilder/nginx-proxy:0.6.0
     container_name: webserver
     restart: unless-stopped
     tty: true
@@ -26,19 +26,21 @@ services:
     volumes:
       - ./:/var/www
       - ./nginx/deploy/default.conf:/etc/nginx/conf.d/default.conf
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
+      - /var/run/docker.sock:/tmp/docker.sock:ro  # Mount Docker socket for dynamic configuration
     networks:
       - app-network
 
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion:v1.7
+    container_name: letsencrypt
+    restart: always
     volumes:
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
-      - ./:/var/www
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+      - ./letsencrypt/certs:/etc/nginx/certs:rw  # Mount volume for certificate storage
+      - /var/run/docker.sock:/var/run/docker.sock:ro  # Mount Docker socket for communication
+    environment:
+      - REUSE_PRIVATE_KEYS=true
+    depends_on:
+      - webserver  # Ensure webserver is started first
     networks:
       - app-network
 
@@ -77,7 +79,5 @@ networks:
     driver: bridge
 
 volumes:
-  certbot-etc:
-  certbot-var:
   dbdata:
     driver: local
