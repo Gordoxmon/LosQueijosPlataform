@@ -27,8 +27,7 @@
         </div>
     <?php endforeach; ?>
 </div>
-<?=  "asjiofbnhsweo" ?>
-<?php echo"ola"?>
+
 <script>
     const topics= <?= json_encode($topics) ?>;
     console.log(topics);

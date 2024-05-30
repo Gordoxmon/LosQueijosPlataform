@@ -1,0 +1,164 @@
+/*Imagem Fundo*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.testea{
+    background-color: #442222;
+}
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 60%;
+    max-height: 100%;
+    margin: auto;
+}
+
+
+/*Imagem Rato*/
+.img-rato{
+    width: 14%;
+    z-index: 1;
+    position: absolute;
+    left: 43%;
+    top: 23%
+}
+
+
+/*Imagem Titulo*/
+.img-titulo{
+    width: 30%;
+    z-index: 1;
+    position: absolute;
+    left: 35%;
+    top: 5%
+}
+
+
+/* Botões */
+.button, .button2, .button3 {
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin: 2%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button {
+    top: 50%; /* Posiciona o topo do botão no meio vertical */
+}
+
+.button2 {
+    top: 60%; /* Posiciona o topo do botão no meio vertical */
+}
+
+.button3 {
+    top: 70%; /* Posiciona o topo do botão no meio vertical */
+}
+
+.button a, .button2 a, .button3 a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte fixo */
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFAC33;
+    display: inline-block;
+    padding: 10px 20px; /* Tamanho do padding fixo */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 5px 0 #915100; /* Altura do botão fixa */
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 5px 0 #915100; /* Altura do botão fixa */
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 5px 0 #915100; /* Altura do botão fixa */
+    -webkit-border-radius: 5px; /* Raio da borda fixo */
+    -moz-border-radius: 5px; /* Raio da borda fixo */
+    border-radius: 5px; /* Raio da borda fixo */
+}
+
+.button a:active, .button2 a:active, .button3 a:active {
+    top: 5px; /* Ajuste de altura quando clicado */
+    background-color: #FFAC33;
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -2px 0 #915100; /* Sombra quando clicado */
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -2px 0 #915100; /* Sombra quando clicado */
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -2px 0 #915100; /* Sombra quando clicado */
+}
+
+.button:after, .button2:after, .button3:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -10px; /* Altura da sombra fixa */
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px; /* Raio da borda da sombra fixo */
+    -moz-border-radius: 5px; /* Raio da borda da sombra fixo */
+    border-radius: 5px; /* Raio da borda da sombra fixo */
+}
+
+@media screen and (max-width: 768px) {
+    /* Adaptações para telas menores */
+    .button a, .button2 a, .button3 a {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+        -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 3px 0 #915100;
+        -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 3px 0 #915100;
+        box-shadow: inset 0 1px 0 #FFE5C4, 0 3px 0 #915100;
+        -webkit-border-radius: 3vw;
+        -moz-border-radius: 3vw;
+        border-radius: 3vw;
+    }
+
+    .button:after, .button2:after, .button3:after {
+        padding: 1vw;
+        bottom: -2vw;
+        -webkit-border-radius: 3vw;
+        -moz-border-radius: 3vw;
+        border-radius: 3vw;
+    }
+}
+
+
+/* Fonte personalizada */
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
+.mint4 {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    left: 49%;
+    top:3%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.mint5 {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    left: 49%;
+    top:12%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2;
+}
