@@ -1,0 +1,163 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container da imagem de fundo */
+.imgbox {
+    display: grid;
+    height: 100vh;
+    position: relative;
+}
+
+.center-fit {
+    max-width: 60%;
+    max-height: 100%;
+    margin: auto;
+}
+
+/* Imagem do rato */
+.img-rato {
+    width: 20%;
+    z-index: 1;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+}
+
+/* Botão Continuar */
+.button6 {
+    position: fixed;
+    display: inline-block;
+    margin: 20px;
+    z-index: 1;
+    cursor: pointer;
+    right: 10px;
+    top: 80%; /* Posição do botão no canto inferior direito */
+}
+
+.button6 a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFAC33;
+    display: block;
+    position: relative;
+    padding: 15px 30px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button6 a:active {
+    top: 10px;
+    background-color: #FFAC33;
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button6::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Fonte personalizada */
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
+/* Texto "Vitória!" */
+.mint2 {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 80px;
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2; 
+}
+
+/* Imagens dos queijos */
+.amarelo1, .amarelo2, .rosa1, .rosa2, .azul1, .azul2, .roxo1, .roxo2 {
+    width: 100px; 
+    position: absolute;
+    z-index: 1; 
+}
+
+/* Posições e rotações específicas para cada imagem */
+.amarelo1 {
+    top: 10%;
+    left: 10%;
+    transform: rotate(10deg);
+}
+
+.amarelo2 {
+    top: 20%;
+    right: 20%;
+    transform: rotate(-15deg);
+}
+
+.rosa1 {
+    bottom: 15%;
+    left: 20%;
+    transform: rotate(20deg);
+}
+
+.rosa2 {
+    bottom: 25%;
+    right: 25%;
+    transform: rotate(-25deg);
+}
+
+.azul1 {
+    top: 30%;
+    left: 25%;
+    transform: rotate(30deg);
+}
+
+.azul2 {
+    top: 40%;
+    right: 10%;
+    transform: rotate(-35deg);
+}
+
+.roxo1 {
+    bottom: 40%;
+    left: 10%;
+    transform: rotate(40deg);
+}
+
+.roxo2 {
+    bottom: 70%;
+    right: 5%;
+    transform: rotate(-45deg);
+}

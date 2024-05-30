@@ -1,0 +1,44 @@
+/*Botão Seta*/
+.Sair {
+    width: 100px;
+    float: top,left;
+    cursor: pointer;
+}
+
+/*Lista*/
+ul {
+    list-style-image: url("Imagens/queijo.png");
+    margin-left: 39%;
+    margin-top: 0%;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: letf;
+    color: #f5ca5f;
+}
+
+
+
+
+/* Fonte personalizada */
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
+/* Texto "Vitória!" */
+.mint3 {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2; 
+}

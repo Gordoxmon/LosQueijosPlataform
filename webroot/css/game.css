@@ -1,0 +1,317 @@
+.triangulo{
+    position: absolute;
+    margin-top: 7%;
+    margin-left:38%;
+    width: 100px;
+    z-index: 1;
+
+}
+
+body{
+    height: 100vh;
+}
+
+.pie {
+    overflow: hidden;
+    position: absolute;
+    margin: 1em auto;
+    border: 1px;
+    padding: 0;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    list-style: none;
+    transition: all 1s;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+.slice-amarelo {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+.slice-amarelo {
+    transform: rotate(90deg) skewY(180deg);
+}
+
+
+
+.slice-roxo {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+.slice-roxo {
+    transform: rotate(0deg) skewY(180deg);
+}
+
+
+
+.slice-rosa {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+.slice-rosa {
+    transform: rotate(180deg) skewY(180deg);
+}
+
+.slice-rosa:first-child .rosa {
+    transform: skewY(22.5deg);
+    /* unskew slice contents */
+}
+
+.slice-azul {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+}
+
+.slice-azul {
+    transform: rotate(270deg) skewY(180deg);
+}
+
+.slice-azul:first-child .azul {
+    transform: skewY(22.5deg);
+    /* unskew slice contents */
+}
+
+
+.amarelo {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: #F8E18E;
+}
+
+.roxo {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: #7C7BBA;
+}
+
+.azul {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: #49A4CA;
+}
+
+.rosa {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    background: #F88E8E;
+}
+
+
+
+
+
+.button {
+    position: fixed;
+    display: inline-block;
+    margin: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.button {
+    position: absolute;
+    margin-top: 42%;
+    margin-left: 34%;
+}
+
+.button a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFAC33;
+    display: block;
+    position: relative;
+    padding: 15px 30px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button a:active {
+    top: 10px;
+    background-color: #FFAC33;
+    -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ratoPC {
+    position: absolute;
+    margin-top: 21%;
+    width: 350px;
+}
+
+body {
+    background: dimgrey;
+    perspective: 35em;
+}
+
+.speech-bubble {
+    position: absolute;
+    margin: .5em auto;
+    padding: .5em;
+    width: 15em;
+    height: auto;
+    border-radius: .25em;
+    transform: rotate(-4deg) rotateY(15deg);
+    background: #629bdd;
+    font: 1em/1.5 Century Gothic, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    font-weight: bold;
+    margin-top: 12%;
+    margin-left: 7%;
+}
+
+
+.speech-bubble:before,
+.speech-bubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+}
+
+.speech-bubble:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    transform: rotate(2deg) translate(.25em, -.1em) scale(1.02);
+    background: #f4fbfe;
+}
+
+.speech-bubble:before {
+    border: solid 0 transparent;
+    border-right: solid 3em #f4fbfe;
+    border-bottom: solid .25em #629bdd;
+    bottom: .25em;
+    left: 1em;
+    width: 0;
+    height: .75em;
+    transform: rotate(45deg) skewX(75deg);
+}
+
+.roxopreso {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 58%;
+}
+
+.rosapreso {
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 72%;
+}
+
+.azulpreso {
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 58%;
+}
+
+.amarelopreso {
+    position: absolute;
+    margin-top: 28%;
+    margin-left: 72%;
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+@font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+}
+
+.mint {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    left: 68%;
+}
+
+/*Botão Seta*/
+.Sair {
+    width: 100px;
+    float: left;
+    cursor: pointer;
+}
+
+/*Lista*/
+ul {
+    list-style-image: url("Imagens/queijo.png");
+    margin-left: 39%;
+    margin-top: 0%;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: letf;
+    color: #f5ca5f;
+}
