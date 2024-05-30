@@ -30,7 +30,7 @@
     <?= $this->Html->css('styles.css') ?>
     <?= $this->html->script('scripts.js') ?>
 </head>
-<body style='background-color: #659664;'>
+<body>
 
         <?= $this->fetch('content') ?>
 

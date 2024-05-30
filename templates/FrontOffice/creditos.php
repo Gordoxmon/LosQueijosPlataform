@@ -12,13 +12,8 @@
 
     <h1 class="mint3">Trabalho realizado por:</h1>
 
-    <a>
+    <a href="index">
         <?= $this->Html->image('left-arrow.png', ['class' => 'Sair']) ?>
-
-
-
-
-
     </a>
 
     <ul>

@@ -21,11 +21,9 @@
 </div>
 
 <div ontouchstart="">
-    <div class="button6">
-
+<div class="button6">
             <?= $this->Html->link("Tenta outra vez!", ["action"=>"game","class" => "btn btn-primary","required"=>true]) ?>
-
-    </div>
+        </div>
 </div>
 
 <div>

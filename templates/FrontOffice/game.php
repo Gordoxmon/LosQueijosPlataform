@@ -25,7 +25,7 @@
 
 <h1 class="mint">Vidas: 4</h1>
 
-<a href="lore3.php">
+<a href="lore3">
     <?= $this->Html->image('left-arrow.png', ['class' => 'Sair', 'role' => 'button']) ?>
 </a>
 
