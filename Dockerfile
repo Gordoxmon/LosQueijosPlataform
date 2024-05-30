@@ -18,6 +18,7 @@ WORKDIR /var/www
 
 COPY . .
 
+
 RUN composer install
 
 CMD ["php-fpm"]
