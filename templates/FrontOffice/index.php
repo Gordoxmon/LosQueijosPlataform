@@ -13,6 +13,7 @@
 <h1 class="mint4">Queijinho</h1>
 <h1 class="mint5">Cibersegurança</h1>
 
+<h2 id="debug">YEAH THIS IS A DEV MODE!</h2>
 
 <div class="imgbox">
 
@@ -37,3 +38,14 @@
 </body>
 
 </html>
+<script>
+    const debugButton=$("#debug");
+    // make the colors change like a raimbow radiant
+    setInterval(()=>{
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        debugButton.css("color",`rgb(${r},${g},${b})`);
+    },1000);
+
+</script>
