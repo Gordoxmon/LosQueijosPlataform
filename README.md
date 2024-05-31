@@ -58,3 +58,4 @@ docker exec platform bin/cake migrations migrate
 ```bash
 docker exec platform bin/cake migrations seed
 ```
+teste
