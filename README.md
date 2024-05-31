@@ -28,6 +28,12 @@ cd o nome da pasta
 docker compose -f docker-compose.dev.yml up -d
 ```
 
+Se não abrir o web site, então:
+```bash
+docker exec platform composer install
+```
+
+
 ## Acesso
 - Acesse a aplicação em [http://localhost](http://localhost)
 - Acesse o phpmyadmin em [http://localhost:8080](http://localhost:8080)
